@@ -1,17 +1,22 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const ProtectedLogin = ({ auth, component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => (!auth ? <Component /> : <Redirect to="/" />)}
-    />
-  );
+const ProtectedLogin = ({ auth, component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={() => (!auth ? <Component /> : <Redirect to="/" />)}
+  />
+);
+
+ProtectedLogin.propTypes = {
+  auth: PropTypes.bool.isRequired,
+  component: PropTypes.element.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth,
 });
 

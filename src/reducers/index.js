@@ -1,18 +1,18 @@
+import Cookies from 'js-cookie';
 import {
   FETCH_USERS,
   NEW_RECORD,
   LOGIN,
   LOGOUT,
   FETCH_RECORDS,
-} from "../actions/types";
-import Cookies from "js-cookie";
+} from '../actions/types';
 
-const user = Cookies.get("user");
+const user = Cookies.get('user');
 
 const initialState = {
   users: [],
   user: user ? JSON.parse(user) : {},
-  auth: user ? true : false,
+  auth: !!user,
   records: [],
 };
 
@@ -34,7 +34,7 @@ const userReducer = (state = initialState, action) => {
         records: [...state.records, action.payload],
       };
     case LOGIN:
-      Cookies.set("user", action.payload);
+      Cookies.set('user', action.payload);
       return {
         ...state,
         auth: true,

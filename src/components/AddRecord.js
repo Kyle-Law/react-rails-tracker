@@ -1,14 +1,29 @@
-import React from "react";
-import { newRecord } from "../actions";
-import { connect } from "react-redux";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { newRecord } from '../actions';
 
 function AddRecord({ newRecord, user }) {
+  function resetForm() {
+    document.getElementById('portfolio').value = '';
+    document.getElementById('emotion').value = '';
+    document.getElementById('description').value = '';
+  }
+
   function addNewRecord(e) {
     e.preventDefault();
-    const portfolio = document.getElementById("portfolio").value;
-    const emotion = document.getElementById("emotion").value;
-    const description = document.getElementById("description").value;
-    newRecord({ user_id: user.id, portfolio, emotion, description });
+    const portfolio = document.getElementById('portfolio').value;
+    const emotion = document.getElementById('emotion').value;
+    const description = document.getElementById('description').value;
+    newRecord({
+      user_id: user.id,
+      portfolio,
+      emotion,
+      description,
+    });
+    resetForm();
   }
 
   return (
@@ -27,12 +42,22 @@ function AddRecord({ newRecord, user }) {
         </select>
         <label htmlFor="description">Description: </label>
         <textarea type="text" id="description" />
-        <button onClick={addNewRecord}>Add Record</button>
+        <button type="submit" onClick={addNewRecord}>
+          Add Record
+        </button>
       </form>
     </div>
   );
 }
-const mapStateToProps = (state) => ({
+
+AddRecord.propTypes = {
+  newRecord: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+  }).isRequired,
+};
+
+const mapStateToProps = state => ({
   users: state.users,
   user: state.user,
 });

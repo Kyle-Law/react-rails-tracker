@@ -1,19 +1,21 @@
-import React from "react";
-// import AuthApi from "./AuthApi";
-import Cookies from "js-cookie";
-import Records from "./Records";
-import Chart from "./Chart";
-import AddRecord from "./AddRecord";
-import { connect } from "react-redux";
-import { logout } from "../actions";
-import { NavLink, Switch, Route } from "react-router-dom";
-import Home from "./Home";
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React from 'react';
+import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
+import { connect } from 'react-redux';
+import { NavLink, Switch, Route } from 'react-router-dom';
+import Records from './Records';
+import Chart from './Chart';
+import AddRecord from './AddRecord';
+import { logout } from '../actions';
+import Home from './Home';
 
-const Dashboard = ({ logout, user }) => {
+const Dashboard = ({ logout }) => {
   // const Auth = React.useContext(AuthApi);
 
   function onLogout() {
-    Cookies.remove("user");
+    Cookies.remove('user');
     logout();
   }
 
@@ -29,33 +31,40 @@ const Dashboard = ({ logout, user }) => {
       </Switch>
       <nav>
         <NavLink exact to="/" className="nav-item">
-          <i className="fas fa-home"></i>
+          <i className="fas fa-home" />
           <p>Home</p>
         </NavLink>
         <NavLink exact to="/add" className="nav-item">
-          <i className="fas fa-plus-circle"></i> <p>Add</p>
+          <i className="fas fa-plus-circle" />
+          {' '}
+          <p>Add</p>
         </NavLink>
         <NavLink exact to="/records" className="nav-item">
-          <i className="fas fa-database"></i> <p>Records</p>
+          <i className="fas fa-database" />
+          {' '}
+          <p>Records</p>
         </NavLink>
         <NavLink exact to="/chart" className="nav-item">
-          <i className="far fa-chart-bar"></i> <p>Chart</p>
+          <i className="far fa-chart-bar" />
+          {' '}
+          <p>Chart</p>
         </NavLink>
         <div className="nav-item" onClick={onLogout}>
-          <i className="fas fa-sign-out-alt"></i> <p>Logout</p>
+          <i className="fas fa-sign-out-alt" />
+          {' '}
+          <p>Logout</p>
         </div>
       </nav>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  users: state.users,
-  user: state.user,
-});
+Dashboard.propTypes = {
+  logout: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = () => ({
   logout,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps())(Dashboard);
+export default connect(null, mapDispatchToProps())(Dashboard);

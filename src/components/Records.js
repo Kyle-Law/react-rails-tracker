@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { fetchRecords } from "../actions";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { fetchRecords } from '../actions';
 
 function Records({ records = [], fetchRecords, user }) {
   useEffect(() => {
     fetchRecords(user.id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="records-container">
@@ -17,11 +17,14 @@ function Records({ records = [], fetchRecords, user }) {
           <p>Emotion</p>
           <p>Description</p>
         </div>
-        {records &&
-          records.map((record, index) => (
+        {records
+          && records.map((record, index) => (
             <div key={record.id} className="record-item">
               <p>{index + 1}</p>
-              <p>${record.portfolio}</p>
+              <p>
+                $
+                {record.portfolio}
+              </p>
               <p>{record.emotion}</p>
               <p>{record.description}</p>
             </div>
@@ -31,7 +34,15 @@ function Records({ records = [], fetchRecords, user }) {
   );
 }
 
-const mapStateToProps = (state) => ({
+Records.propTypes = {
+  records: PropTypes.arrayOf(Object).isRequired,
+  fetchRecords: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+  }).isRequired,
+};
+
+const mapStateToProps = state => ({
   records: state.records,
   user: state.user,
 });
