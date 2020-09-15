@@ -9,7 +9,7 @@
 ## Presentations
 
 - View the live version [HERE](https://kyle-tracker.herokuapp.com/)
-- View the project walkthrough [HERE]()
+- View the project walkthrough [HERE](https://youtu.be/P-J-hmt4AMY)
 
 ## Rails Backend API Association Diagram
 
