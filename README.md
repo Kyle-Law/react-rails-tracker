@@ -1,22 +1,21 @@
-# React to Pokémon
+# Portfolio Tracker
 
-> A simple pokémon catelog for season 1-3, built with React & Redux and [PokeAPI](https://pokeapi.co/)
-
-User can search or filter pokémon based on season (only 3 seasons are included)
+> A Simple Tracker mobile app built with React & Rails API.
 
 ## Snapshots
 
-![image](https://user-images.githubusercontent.com/55923773/91823637-1cadd980-ec6c-11ea-9b36-9565b394ff95.png)
+![image](https://user-images.githubusercontent.com/55923773/93201481-d2f0e300-f783-11ea-9f8c-6b52d422f15f.png)
 
 ## Presentations
 
-- View the live version [HERE](https://react-to-pokemon.herokuapp.com/)
-- View the project walkthrough [HERE](https://www.loom.com/share/924fed8a12d94add8f7e28c1bc1a3457)
+- View the live version [HERE](https://kyle-tracker.herokuapp.com/)
+- View the project walkthrough [HERE]()
 
 ## Built With
 
 - React & Redux
-- Enzyme for Testing
+- Rails for API
+- Enzyme & Jest for Testing
 
 ## Deployment
 
@@ -52,7 +51,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- [PokeAPI](https://pokeapi.co/)
+- [Gregoire Vella](https://www.behance.net/gregoirevella) for [design idea](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI)
 
 ## 📝 License
 

@@ -1,6 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+/* eslint-disable react/jsx-one-expression-per-line */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 function Home({ user }) {
   return (
@@ -20,7 +21,7 @@ Home.propTypes = {
   }).isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   user: state.user,
 });
 
