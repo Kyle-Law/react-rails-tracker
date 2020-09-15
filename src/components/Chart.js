@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as d3 from 'd3';
@@ -79,7 +80,7 @@ function Chart({ records = [], fetchRecords, user }) {
 }
 
 Chart.propTypes = {
-  records: PropTypes.arrayOf(Object).isRequired,
+  records: PropTypes.arrayOf(Object),
   fetchRecords: PropTypes.func.isRequired,
   user: PropTypes.shape({
     id: PropTypes.number,

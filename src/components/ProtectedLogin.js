@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
-import PropTypes from "prop-types";
-import { Route, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const ProtectedLogin = ({ auth, component: Component, ...rest }) => (
   <Route
@@ -16,7 +16,7 @@ ProtectedLogin.propTypes = {
   component: PropTypes.shape({}).isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth,
 });
 

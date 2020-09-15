@@ -28,7 +28,7 @@
 
 1. Run `npm i`
 2. Run `npm run test a`
-3. `15 passed, 15 total` will be shown. :)
+3. `10 passed, 10 total` will be shown. :)
 
 ## Authors
 
