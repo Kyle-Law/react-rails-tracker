@@ -1,6 +1,6 @@
 # Portfolio Tracker
 
-> A Simple Tracker mobile app built with React & Rails API.
+> A Simple Tracker mobile app built with React & [Rails API](https://github.com/Kyle-Law/rails-tracker-api).
 
 ## Snapshots
 
@@ -10,6 +10,10 @@
 
 - View the live version [HERE](https://kyle-tracker.herokuapp.com/)
 - View the project walkthrough [HERE]()
+
+## Rails Backend API Association Diagram
+
+![image](https://user-images.githubusercontent.com/55923773/93226288-bbc2ed00-f7a5-11ea-9d0b-83064fc83207.png)
 
 ## Built With
 

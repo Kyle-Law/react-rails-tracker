@@ -21,7 +21,11 @@ button {
 
 header {
   margin-bottom: 10px;
+  position: fixed;
   box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.67);
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header h1 {
@@ -32,11 +36,6 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-}
-
-.main-container {
-  margin-bottom: 60px;
-  overflow: scroll;
 }
 
 .login-container {
@@ -97,10 +96,12 @@ nav div {
 .home-container,
 .chart-container,
 .records-container,
-.add-record-container {
+.add-record-container,
+.login-container {
   padding: 10px;
   margin-bottom: 50px;
   overflow: scroll;
+  margin-top: 65px;
 }
 
 .home-container {
