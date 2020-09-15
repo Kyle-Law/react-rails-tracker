@@ -5,10 +5,6 @@ import PropTypes from 'prop-types';
 import { fetchRecords } from '../actions';
 
 function Chart({ records = [], fetchRecords, user }) {
-  useEffect(() => {
-    fetchRecords(user.id);
-  }, []);
-
   function addPortfolioChart() {
     document.getElementById('portfolio').innerHTML = '';
 
@@ -66,8 +62,10 @@ function Chart({ records = [], fetchRecords, user }) {
   }
 
   useEffect(() => {
+    fetchRecords(user.id);
     addPortfolioChart();
     addEmotionChart();
+    // eslint-disable-next-line
   }, [records]);
 
   return (

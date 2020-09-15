@@ -6,6 +6,7 @@ import { fetchRecords } from '../actions';
 function Records({ records = [], fetchRecords, user }) {
   useEffect(() => {
     fetchRecords(user.id);
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="records-container">
