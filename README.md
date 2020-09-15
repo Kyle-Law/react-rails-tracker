@@ -4,7 +4,7 @@
 
 ## Snapshots
 
-![image](https://user-images.githubusercontent.com/55923773/93201481-d2f0e300-f783-11ea-9f8c-6b52d422f15f.png)
+![image](https://user-images.githubusercontent.com/55923773/93202925-1ea48c00-f786-11ea-8b30-88b865301d19.png)
 
 ## Presentations
 
