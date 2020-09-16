@@ -45,8 +45,8 @@ Records.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  records: state.records,
-  user: state.user,
+  records: state.recordReducer.records,
+  user: state.userReducer.user,
 });
 
 const mapDispatchToProps = () => ({

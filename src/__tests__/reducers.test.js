@@ -1,10 +1,8 @@
-import userReducer from '../reducers';
+import rootReducer from '../reducers';
 
 const initialState = {
-  users: [],
-  user: {},
-  auth: false,
-  records: [],
+  recordReducer: { records: [] },
+  userReducer: { auth: false, user: {}, users: [] },
 };
 
 it('handles actions of type LOGIN', () => {
@@ -13,10 +11,10 @@ it('handles actions of type LOGIN', () => {
     payload: { id: 1, username: 'kyle' },
   };
 
-  const newState = userReducer(initialState, action);
+  const newState = rootReducer(initialState, action);
 
-  expect(newState.user).toEqual({ id: 1, username: 'kyle' });
-  expect(newState.auth).toEqual(true);
+  expect(newState.userReducer.user).toEqual({ id: 1, username: 'kyle' });
+  expect(newState.userReducer.auth).toEqual(true);
 });
 
 it('handles actions of type LOGOUT', () => {
@@ -25,13 +23,13 @@ it('handles actions of type LOGOUT', () => {
     payload: '',
   };
 
-  const newState = userReducer(initialState, action);
+  const newState = rootReducer(initialState, action);
 
-  expect(newState.auth).toEqual(false);
+  expect(newState.userReducer.auth).toEqual(false);
 });
 
 it('handles action with unknown type', () => {
-  const newState = userReducer(initialState, { type: 'ASDKLJAD' });
+  const newState = rootReducer(initialState, { type: 'ASDKLJAD' });
 
   expect(newState).toEqual(initialState);
 });

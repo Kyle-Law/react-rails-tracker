@@ -22,7 +22,7 @@ Home.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  user: state.user,
+  user: state.userReducer.user,
 });
 
 const mapDispatchToProps = () => ({});

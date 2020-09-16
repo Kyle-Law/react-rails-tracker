@@ -17,7 +17,7 @@ ProtectedRoute.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth,
+  auth: state.userReducer.auth,
 });
 
 export default connect(mapStateToProps, {})(ProtectedRoute);

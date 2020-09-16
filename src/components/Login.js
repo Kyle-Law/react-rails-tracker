@@ -52,7 +52,7 @@ Login.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  users: state.users,
+  users: state.userReducer.users,
 });
 
 const mapDispatchToProps = () => ({

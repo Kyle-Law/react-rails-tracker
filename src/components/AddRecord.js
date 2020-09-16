@@ -58,8 +58,8 @@ AddRecord.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  users: state.users,
-  user: state.user,
+  users: state.userReducer.users,
+  user: state.userReducer.user,
 });
 
 const mapDispatchToProps = () => ({
