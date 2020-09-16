@@ -10,7 +10,9 @@ function Chart({ records = [], fetchRecords, user }) {
     document.getElementById('portfolio').innerHTML = '';
 
     //  the data that powers the bar chart, a simple array of numeric values
-    const portfolioData = records.map(r => r.portfolio);
+    let portfolioData = records.map(r => r.portfolio);
+    const recordMax = Math.max(...portfolioData);
+    portfolioData = portfolioData.map(d => (d / recordMax) * 200);
 
     //  the size of the overall svg element
     const height = 200;
