@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Tracker
 
-## Available Scripts
+> A Simple Tracker mobile app built with React & [Rails API](https://github.com/Kyle-Law/rails-tracker-api).
 
-In the project directory, you can run:
+## Snapshots
 
-### `yarn start`
+![image](https://user-images.githubusercontent.com/55923773/93202925-1ea48c00-f786-11ea-8b30-88b865301d19.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Presentations
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- View the live version [HERE](https://kyle-tracker.herokuapp.com/)
+- View the project walkthrough [HERE](https://youtu.be/P-J-hmt4AMY)
 
-### `yarn test`
+## Rails Backend API Association Diagram
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/55923773/93226288-bbc2ed00-f7a5-11ea-9d0b-83064fc83207.png)
 
-### `yarn build`
+## Built With
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React & Redux
+- Rails for API
+- Enzyme & Jest for Testing
+- D3.js for Charting
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo
+2. run `npm run i` and `npm start`
+3. Open `http://localhost:3000/`
+4. Enjoy :)
 
-### `yarn eject`
+## Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Run `npm i`
+2. Run `npm run test a`
+3. `10 passed, 10 total` will be shown. :)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤 **Kyle Law**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Github: [@Kyle-Law](https://github.com/Kyle-Law)
+- Twitter: [@Kyle-Law](https://twitter.com/ZhunKhing)
+- Linkedin: [Kyle law](https://www.linkedin.com/in/kyle-lawzhunkhing/)
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues and feature requests are welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to check the [issues page](https://github.com/Kyle-Law/react-to-pokemon/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 
-### Code Splitting
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Give a ⭐️ if you like this project!
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Microverse
+- [Gregoire Vella](https://www.behance.net/gregoirevella) for [design idea](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI)
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is [MIT](LICENSE) licensed.
